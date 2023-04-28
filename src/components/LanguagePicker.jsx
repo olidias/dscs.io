@@ -66,7 +66,7 @@ export default function LanguagePicker({ url }) {
             {languages.map((language, i) => (
               <a
                 key={i}
-                href={`/${language.key}/`}
+                href={`/${language.key}`}
                 className="text-gray-700 px-4 py-2 text-sm flex justify-items-start hover:bg-gray-100"
                 role="menuitem"
                 tabIndex="-1"
