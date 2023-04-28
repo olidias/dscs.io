@@ -23,10 +23,10 @@ const {
 ---
 
 <section class="scroll-mt-16" id="features">
-  <div class="px-4 py-16 mx-auto max-w-6xl lg:px-8 lg:py-20">
+  <div class="px-4 pt-16 mx-auto max-w-6xl lg:px-8 lg:pt-20">
     {
       (title || subtitle || highlight) && (
-        <div class="mb-10 md:mx-auto text-center md:mb-12 max-w-3xl">
+        <div class="mb-10 md:mx-auto text-center md:mb-6 max-w-3xl">
           {highlight && (
             <p
               class="text-base text-primary dark:text-blue-200 font-semibold tracking-wide uppercase"
@@ -41,11 +41,14 @@ const {
           )}
 
           {subtitle && (
-            <p class="max-w-3xl mx-auto sm:text-center text-xl text-muted dark:text-slate-400" set:html={subtitle} />
+            <p class="max-w-3xl mx-auto sm:text-center text-2xl text-muted dark:text-slate-400" set:html={subtitle} />
           )}
         </div>
       )
     }
+    <div class="flex justify-center mb-6  ">
+      <div class="border-b-2 text-primary dark:text-slate-800 my-5 max-w-xs flex w-full " />
+    </div>
     <div class="grid mx-auto space-y-6 md:grid-cols-2 md:space-y-0">
       {
         items.map((subitems) => (

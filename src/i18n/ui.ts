@@ -24,6 +24,8 @@ export const ui = {
 
     "hero.title": "Dias Software Consulting Services",
     "hero.subtitle": "Solid Software. Competent Consulting.",
+
+    "entry.teaser": "Unleash the full potential of your software with our customer-centric consulting services and individualised software!"
   },
   de: {
     "header.useCases": "Anwendungsfälle",
@@ -31,5 +33,7 @@ export const ui = {
     "header.tools": "Tools & Tech",
     "header.about": "Über uns",
     "header.contact": "Kontakt",
+
+    "entry.teaser": "Entfessle das volle Potential Deiner Software mit unserer kundenorientierter Beratung und massgeschneiderter Software!"
   },
 } as const;

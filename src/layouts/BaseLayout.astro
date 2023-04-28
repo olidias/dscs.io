@@ -16,7 +16,7 @@ const { textDirection = 'ltr' } = SITE;
 ---
 
 <!DOCTYPE html>
-<html lang={meta.language ? meta.language : 'en'} dir={textDirection} class="2xl:text-[20px]">
+<html lang={meta.language ? meta.language : SITE.language} dir={textDirection} class="2xl:text-[20px]">
   <head>
     <MetaTags {...meta} />
   </head>
