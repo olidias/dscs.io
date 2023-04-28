@@ -11,8 +11,6 @@ export default function LanguagePicker({ url }) {
   }
   const lang = languages.find(l => l.key === getLangFromUrl(url));
 
-
-
   const [isComponentVisible, setIsComponentVisible] = useState(true);
   const ref = useRef(null);
 
@@ -57,7 +55,7 @@ export default function LanguagePicker({ url }) {
         <div
           className={`${
             menuOpen ? "" : "hidden"
-          } absolute right-0 z-10 mt-2 w-56 origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none`}
+          } absolute right-0 z-10 mt-2 w-48 origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none`}
           id="languageDropdown"
           role="menu"
           aria-orientation="vertical"
@@ -74,8 +72,8 @@ export default function LanguagePicker({ url }) {
                 tabIndex="-1"
                 id="menu-item-0"
               >
-                <div className="flex-col justify-items-center w-5 h-5 mr-2">
-                  <Icon icon={language?.icon} />
+                <div className="flex-col flex w-5 h-5 items-center justify-center">
+                  <Icon icon={language?.icon} className="flex mr-2" />
                 </div>
                 <span className="align-middle">{language.label}</span>
               </a>
