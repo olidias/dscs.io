@@ -38,6 +38,31 @@ export const ui = {
 
     'entry.item-quality.title': 'Quality',
     'entry.item-quality.description': 'With selected tools we strive for only the highest quality.',
+
+    'use-cases.title': 'Use Cases',
+    'use-cases.subtitle': 'How we can help you',
+    
+
+    'use-cases.case1.title': 'Just started?',
+    'use-cases.case1.description': 'We can build your new business website for a successful start to operations!',
+
+    'use-cases.case2.title': 'Your CMS does not offer what you want?',
+    'use-cases.case2.description': 'Talk to us and we\'re going to find the best solution to your problem. ',
+
+    'use-cases.case3.title': 'Time for a modernisation?',
+    'use-cases.case3.description': 'We work out a new design with your input and implement your portfolio, your wedding page or integrate your webshop.',
+
+
+
+
+
+
+
+
+
+
+
+    'shared.readmore': 'Read more'
   },
   de: {
     'header.useCases': 'Anwendungsfälle',
@@ -52,12 +77,42 @@ export const ui = {
     'entry.item-fully-customized.description': 'Durch modernste Technologien und kreativen Ansätzen kommen wir zur individualisierten Applikation gemäss Deiner Vorstellung. ',
 
     'entry.item-customer-centricity.title': 'Kundenzentrierung',
-    'entry.item-customer-centricity.description': 'Du sollst bestimmen können, wohin es mit deiner Website gehen soll. Wir sind unterstützen und beraten dich im gesamten Prozess!',
+    'entry.item-customer-centricity.description': 'Du sollst bestimmen können, wohin es mit deiner Website gehen soll. Wir unterstützen und beraten Dich im gesamten Prozess!',
 
     'entry.item-usability.title': 'Usability Fokus',
     'entry.item-usability.description': 'Wir legen besonderen Wert auf Usability. Durch responsive und bezaubernde Websites sprechen wir eine Vielzahl von Benutzer an.',
 
     'entry.item-quality.title': 'Qualität',
     'entry.item-quality.description': 'Mit auserwählten Tools streben wir nach höchster Qualität.',
+
+    'use-cases.title': 'Anwendungsfälle',
+    'use-cases.subtitle': 'Wie wir helfen können',
+
+    'use-cases.case1.title': 'Neu gestartet?',
+    'use-cases.case1.description': 'Wir helfen mit dem Aufbau deiner neuen Unternehmenswebsite für einen erfolgreichen Start in den Betrieb!',
+
+
+    'use-cases.case2.title': 'Dein CMS bietet nicht was du dir wünschst?',
+    'use-cases.case2.description': 'Sprich mit uns und wir finden gemeinsam die beste Lösung für dein Problem. Viele Wege führen zum Ziel!',
+
+    'use-cases.case3.title': 'Modernisierung gefällig?',
+    'use-cases.case3.description': 'Wir erarbeiten mit deinem Input ein neues Design und implementieren dir dein Portfolio, deine Hochzeitspage oder integrieren deinen Webshop.',
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    'shared.readmore': 'Mehr'
   },
 } as const;
