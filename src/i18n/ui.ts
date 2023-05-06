@@ -40,11 +40,11 @@ export const ui = {
     'entry.item-quality.description': 'With selected tools we strive for only the highest quality.',
 
     'use-cases.title': 'Use Cases',
-    'use-cases.subtitle': 'We can help you',
+    'use-cases.subtitle': 'We can help.',
     
 
-    'use-cases.case1.title': 'Just started?',
-    'use-cases.case1.description': 'We can build your new business website for a successful start to operations!',
+    'use-cases.case1.title': 'Just started?', //TODO rename casing case-1
+    'use-cases.case1.description': 'We build your new business website for a successful start to operations!',
 
     'use-cases.case2.title': 'Your CMS does not offer what you want?',
     'use-cases.case2.description': 'Talk to us and we\'re going to find the best solution to your problem. ',
@@ -53,11 +53,20 @@ export const ui = {
     'use-cases.case3.description': 'We work out a new design with your input and implement your portfolio, your wedding page or integrate your webshop.',
 
 
+    'procedure.title': 'Procedure',
+    'procedure.subtitle': 'How we find the optimal solution',
 
+    'procedure.step-1': 'First Touchpoint',
+    'procedure.step-1.description': 'You describe your problem and your thoughts and we discuss a suitable solution.',
 
+    'procedure.step-2': 'Analysis & Concept',
+    'procedure.step-2.description': 'Based on our first contact we create an analysis and present our concept for your application.',
 
+    'procedure.step-3': 'Iterative Implementation',
+    'procedure.step-3.description': 'Now we\'re developing the application based on the evaluated points. You stay involved with recurring exchanges to ensure a successful solution according to your expectations.',
 
-
+    'procedure.step-4': 'Project Finalisation / Transition to Maintenance Mode',
+    'procedure.step-4.description': 'With the successful go-live and with your approval we transition to maintenance mode. Of course we remain at your disposal.',
 
 
 
@@ -85,6 +94,7 @@ export const ui = {
     'entry.item-quality.title': 'Qualität',
     'entry.item-quality.description': 'Mit auserwählten Tools streben wir nach höchster Qualität.',
 
+
     'use-cases.title': 'Anwendungsfälle',
     'use-cases.subtitle': 'Wir können helfen.',
 
@@ -99,13 +109,20 @@ export const ui = {
     'use-cases.case3.description': 'Wir erarbeiten mit deinem Input ein neues Design und implementieren dir dein Portfolio, deine Hochzeitspage oder integrieren deinen Webshop.',
 
 
+    'procedure.title': 'Vorgehen',
+    'procedure.subtitle': 'So führen wir dich zur optimalen Lösung',
 
+    'procedure.step-1': 'Erster Touchpoint',
+    'procedure.step-1.description': 'Du beschreibst dein Problem und deine Gedanken und wir diskutieren über eine passende Lösung.',
 
+    'procedure.step-2': 'Analyse & Konzept',
+    'procedure.step-2.description': 'Basierend auf unserem Austausch erstellen wir eine Analyse und präsentieren dir das Konzept für deine Applikation.',
 
+    'procedure.step-3': 'Iterative Umsetzung',
+    'procedure.step-3.description': 'Nun geht\'s an die Implementation der besprochenen Punkte. Durch regelmässige Abgleiche bleibst du auf dem Laufenden. Zusätzlich stellen wir damit sicher, dass die Lösung deinen Erwartungen entspricht.',
 
-
-
-
+    'procedure.step-4': 'Projektabschluss / Übergang in Maintenance Modus',
+    'procedure.step-4.description': 'Mit dem erfolgreichen Go-Live der Applikation und deiner Zustimmung wechseln wir in den Wartungsmodus. Natürlich bleiben wir erreichbar.',
 
 
 

@@ -88,28 +88,27 @@ const t = useTranslations(lang);
   <!-- Steps Widget ****************** -->
 
   <Steps
-    title="Get your dream website up and running in no time with AstroWind."
+    title={t('procedure.subtitle')}
+    highlight={t('procedure.title')}
     items={[
       {
-        title: 'Step 1: <span class="font-medium">Download</span>',
-        description:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mirisus tempus nulla, sed porttitor est nibh at nulla. Praesent placerat enim ut ex tincidunt vehicula.',
-        icon: 'tabler:package',
+        title: `Step 1: ${t('procedure.step-1')}`,
+        description: `${t('procedure.step-1.description')}`,
+        icon: 'ph:handshake-light',
       },
       {
-        title: 'Step 2: <span class="font-medium">Add content</em>',
-        description:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mirisus tempus nulla, sed porttitor est nibh at nulla.',
-        icon: 'tabler:letter-case',
+        title: `Step 2: ${t('procedure.step-2')}`,
+        description: `${t('procedure.step-2.description')}`,
+        icon: 'icon-park-outline:concept-sharing',
       },
       {
-        title: 'Step 3: <span class="font-medium">Customize styles</span>',
-        description:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mirisus tempus nulla, sed porttitor est nibh at nulla. Praesent placerat enim ut ex tincidunt vehicula. Fusce sit amet dui tellus.',
-        icon: 'tabler:paint',
+        title: `Step 3: ${t('procedure.step-3')}`,
+        description: `${t('procedure.step-3.description')}`,
+        icon: 'wpf:recurring-appointment',
       },
       {
-        title: 'Ready!',
+        title: `Step 4: ${t('procedure.step-4')}`,
+        description: `${t('procedure.step-4.description')}`,
         icon: 'tabler:check',
       },
     ]}
