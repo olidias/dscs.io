@@ -40,7 +40,7 @@ export const ui = {
     'entry.item-quality.description': 'With selected tools we strive for only the highest quality.',
 
     'use-cases.title': 'Use Cases',
-    'use-cases.subtitle': 'How we can help you',
+    'use-cases.subtitle': 'We can help you',
     
 
     'use-cases.case1.title': 'Just started?',
@@ -86,7 +86,7 @@ export const ui = {
     'entry.item-quality.description': 'Mit auserwählten Tools streben wir nach höchster Qualität.',
 
     'use-cases.title': 'Anwendungsfälle',
-    'use-cases.subtitle': 'Wie wir helfen können',
+    'use-cases.subtitle': 'Wir können helfen.',
 
     'use-cases.case1.title': 'Neu gestartet?',
     'use-cases.case1.description': 'Wir helfen mit dem Aufbau deiner neuen Unternehmenswebsite für einen erfolgreichen Start in den Betrieb!',

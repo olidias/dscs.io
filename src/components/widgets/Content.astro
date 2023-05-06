@@ -78,12 +78,12 @@ const {
                   <div class="ml-4">
                     {title2 && <h3 class="text-lg font-medium leading-6 dark:text-white">{title2}</h3>}
                     {description && <p class="mt-2 text-muted dark:text-slate-400" set:html={description} />}
-                    {details && 
-                      <button class="flex dark:text-slate-400 text-muted">{t('shared.readmore')}
-                        <div class="flex flex-col justify-center items-center self-center ml-2 " >
-                          <Icon name='tabler:chevron-down' class="w-3 h-3" />
-                        </div>
-                      </button>
+                    {false && // TODO: details &&
+                      <label for="readmore" >{t('shared.readmore')}</label>
+                      <input type="checkbox" id="readmore" 
+                      class="dark:text-slate-400 text-muted absolute w-full h-full cursor-pointer opacity-0
+                      checked:mt-0 checked:max-h-0 checked:translate-x-1/2" />
+                      <i class="after:translate-x-1 after:rotate-45 before:-rotate-45 before:-translate-x-1 bg-slate-400 w-2 h-4 mt-4 -translate-x-2 absolute content-none"></i>
                     <div class="hidden">{details}</div>}
                   </div>
                 </div>
