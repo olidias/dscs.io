@@ -69,6 +69,8 @@ export const ui = {
     'procedure.step-4.description': 'With the successful go-live and with your approval we transition to maintenance mode. Of course we remain at your disposal.',
 
 
+    'tools.title': 'Tools & Technologies',
+    'tools.subtitle': 'These tools help us reach our goals',
 
 
     'shared.readmore': 'Read more'
@@ -125,6 +127,8 @@ export const ui = {
     'procedure.step-4.description': 'Mit dem erfolgreichen Go-Live der Applikation und deiner Zustimmung wechseln wir in den Wartungsmodus. Natürlich bleiben wir erreichbar.',
 
 
+    'tools.title': 'Tools & Technologien',
+    'tools.subtitle': 'Mit diesen Werkzeugen kommen wir zum Ziel',
 
 
 
