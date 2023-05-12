@@ -71,6 +71,16 @@ export const ui = {
 
     'tools.title': 'Tools & Technologies',
     'tools.subtitle': 'These tools help us reach our goals',
+    'tools.highlight': 'A brief overview of our preferred tech stack.',
+
+    'tools.frontend': 'Frontend',
+    'tools.frontend.description': 'Following technologies are in use for developing the frontend part of our applications:',
+
+    'tools.backend': 'Backend / Databases',
+    'tools.backend.description': 'For more complex logic and for the persistence of data we make use of the listed tools.',
+
+    'tools.cms': 'CMS',
+    'tools.cms.description': 'There are a number of ways to integrate various CMS with our solutions.',
 
 
     'shared.readmore': 'Read more'
@@ -129,8 +139,16 @@ export const ui = {
 
     'tools.title': 'Tools & Technologien',
     'tools.subtitle': 'Mit diesen Werkzeugen kommen wir zum Ziel',
+    'tools.highlight': 'Ein kurzer Überblick auf unseren bevorzugten Technologie Stack.',
 
+    'tools.frontend': 'Frontend',
+    'tools.frontend.description': 'Folgende Technologien stehen für das Darstellen der Websites im Einsatz:',
 
+    'tools.backend': 'Backend / Datenbanken',
+    'tools.backend.description': 'Für komplexere Logik und für die Persistierung von Daten machen wir von den aufgelisteten Tools Gebrauch.',
+
+    'tools.cms': 'CMS',
+    'tools.cms.description': 'Verschiedenste Möglichkeiten zur Integration von allerlei Content Management Systemen sind vorhanden.',
 
 
 
