@@ -82,6 +82,9 @@ export const ui = {
     'tools.cms': 'CMS',
     'tools.cms.description': 'There are a number of ways to integrate various CMS with our solutions.',
 
+    'about.title': 'Who are we?',
+    'about.subtitle': 'subtitle',
+    'about.highlight': 'About us',
 
     'shared.readmore': 'Read more'
   },
@@ -150,7 +153,9 @@ export const ui = {
     'tools.cms': 'CMS',
     'tools.cms.description': 'Verschiedenste Möglichkeiten zur Integration von allerlei Content Management Systemen sind vorhanden.',
 
-
+    'about.title': 'Wer sind wir?',
+    'about.subtitle': 'subtitle',
+    'about.highlight': 'Über uns',
 
     'shared.readmore': 'Mehr'
   },

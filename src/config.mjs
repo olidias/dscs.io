@@ -1,16 +1,13 @@
-import defaultImage from './assets/images/default.png';
-
 const CONFIG = {
-  name: 'AstroWind',
+  name: 'DSCS',
 
-  origin: 'https://astrowind.vercel.app',
+  origin: 'https://dscs.io',
   basePathname: '/',
   trailingSlash: false,
 
-  title: 'AstroWind — Free template for create a website with Astro + Tailwind CSS',
+  title: 'DSCS - Dias Software Consulting Services',
   description:
-    '🚀 Suitable for Startups, Small Business, Sass Websites, Professional Portfolios, Marketing Websites, Landing Pages & Blogs.',
-  defaultImage: defaultImage,
+    'Modern tech company with accentuated focus on client centricity.',
 
   defaultTheme: 'system', // Values: "system" | "light" | "dark" | "light:only" | "dark:only"
 
@@ -24,11 +21,8 @@ const CONFIG = {
     timeZone: 'UTC',
   }),
 
-  googleAnalyticsId: false, // or "G-XXXXXXXXXX",
-  googleSiteVerificationId: 'orcPxI47GSa-cRvY11tUe6iGg2IO_RPvnA1q95iEM3M',
-
   blog: {
-    disabled: false,
+    disabled: true,
     postsPerPage: 4,
 
     post: {

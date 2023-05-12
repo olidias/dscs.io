@@ -11,6 +11,10 @@ interface Item {
   icon?: string;
   details?: string;
 }
+interface Portrait{
+  img: ImageMetadata;
+  description?: string;
+}
 
 export interface Props {
   title?: string;
@@ -18,7 +22,7 @@ export interface Props {
   highlight?: string;
   content?: string;
   items?: Array<Item>;
-  image?: string | any; // TODO: find HTMLElementProps
+  portraitImage?: ImageMetadata;
   isReversed?: boolean;
   isAfterContent?: boolean;
 }
@@ -29,13 +33,13 @@ const {
   highlight,
   content = await Astro.slots.render('content'),
   items = [],
-  image = await Astro.slots.render('image'),
+  portraitImage = await Astro.slots.render('image'),
   isReversed = false,
   isAfterContent = false,
 } = Astro.props;
 ---
 
-<section class:list={[{ 'pt-0 md:pt-0': isAfterContent }, 'bg-blue-50 dark:bg-slate-800 py-14 md:py-16 scroll-mt-12']} id="use-cases">
+<section class:list={[{ 'pt-0 md:pt-0': isAfterContent }, 'bg-blue-50 dark:bg-slate-800 py-14 md:py-16 scroll-mt-12']} id="about">
   <div class="max-w-xl sm:mx-auto lg:max-w-2xl">
     {
       (title || subtitle || highlight) && (
@@ -63,7 +67,6 @@ const {
     <div class={`md:flex ${isReversed ? 'md:flex-row-reverse' : ''} md:gap-16`}>
       <div class="md:basis-1/2 self-center">
         {content && <div class="mb-12 text-lg dark:text-slate-400" set:html={content} />}
-
         {
           items && (
             <div class="space-y-8">
@@ -93,19 +96,19 @@ const {
       </div>
       <div aria-hidden="true" class="mt-10 md:mt-0 md:basis-1/2">
         {
-          image && (
+          portraitImage && (
             <div class="relative m-auto max-w-4xl">
-              {typeof image === 'string' ? (
-                <Fragment set:html={image} />
+              {typeof portraitImage === 'string' ? (
+                <Fragment set:html={portraitImage} />
               ) : (
                 <Picture
-                  class="mx-auto w-full rounded-lg bg-gray-500 shadow-lg"
+                  class="mx-auto w-full rounded-3xl bg-gray-500 shadow-xl"
                   width={500}
                   height={500}
                   widths={[400, 768]}
                   sizes="(max-width: 768px) 100vw, 432px"
                   aspectRatio="500:500"
-                  {...image}
+                  {...portraitImage}
                 />
               )}
             </div>
