@@ -4,7 +4,7 @@ import Features from "~/components/widgets/Features.astro";
 import Features2 from "~/components/widgets/Features2.astro";
 import Steps from "~/components/widgets/Steps.astro";
 import Content from "~/components/widgets/Content.astro";
-import oli from '../assets/images/oli.webp';
+import oli from '../../assets/images/oli.webp';
 
 import { getLangFromUrl, useTranslations } from "~/i18n/utils";
 import {
@@ -152,5 +152,4 @@ const t = useTranslations(lang);
 <About
     title={t('about.title')}
     highlight={t('about.highlight')}
-    portraitImage={oli}
     />

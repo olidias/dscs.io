@@ -125,7 +125,7 @@ export const ui = {
 
 
     'procedure.title': 'Vorgehen',
-    'procedure.subtitle': 'So führen wir dich zur optimalen Lösung',
+    'procedure.subtitle': 'So führen wir Dich zur optimalen Lösung',
 
     'procedure.step-1': 'Erster Touchpoint',
     'procedure.step-1.description': 'Du beschreibst dein Problem und deine Gedanken und wir diskutieren über eine passende Lösung.',

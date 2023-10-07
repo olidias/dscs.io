@@ -1,22 +1,22 @@
 import { getPermalink, getBlogPermalink, getAsset } from '../utils/permalinks';
-import tailwind from '../assets/images/techIcons/tailwind-mark.svg';
-import astro from '../assets/images/techIcons/astro.svg';
-import astro_dark from '../assets/images/techIcons/astro-dark.svg';
-import js from '../assets/images/techIcons/js.svg';
-import ts from '../assets/images/techIcons/ts.svg';
-import vite from '../assets/images/techIcons/vite.svg';
-import gatsby from '../assets/images/techIcons/gatsby.svg';
-import angular from '../assets/images/techIcons/angular.svg';
-import jekyll from '../assets/images/techIcons/jekyll-logo.svg';
-import react from '../assets/images/techIcons/react.svg';
-import webpack from '../assets/images/techIcons/webpack.svg';
-import csharp from '../assets/images/techIcons/csharp.svg';
-import dotnet from '../assets/images/techIcons/dotnet-logo.svg';
-import mongodb from '../assets/images/techIcons/mongodb.svg';
-import mssql from '../assets/images/techIcons/mssql.svg';
-import node from '../assets/images/techIcons/nodejs.svg';
-import wordpress from '../assets/images/techIcons/wordpress.svg';
-import dato from '../assets/images/techIcons/datocms.svg';
+import tailwind from '../../public/techIcons/tailwind-mark.svg';
+import astro from '../../public/techIcons/astro.svg';
+import astro_dark from '../../public/techIcons/astro-dark.svg';
+import js from '../../public/techIcons/js.svg';
+import ts from '../../public/techIcons/ts.svg';
+import vite from '../../public/techIcons/vite.svg';
+import gatsby from '../../public/techIcons/gatsby.svg';
+import angular from '../../public/techIcons/angular.svg';
+import jekyll from '../../public/techIcons/jekyll-logo.svg';
+import react from '../../public/techIcons/react.svg';
+import webpack from '../../public/techIcons/webpack.svg';
+import csharp from '../../public/techIcons/csharp.svg';
+import dotnet from '../../public/techIcons/dotnet-logo.svg';
+import mongodb from '../../public/techIcons/mongodb.svg';
+import mssql from '../../public/techIcons/mssql.svg';
+import node from '../../public/techIcons/nodejs.svg';
+import wordpress from '../../public/techIcons/wordpress.svg';
+import dato from '../../public/techIcons/datocms.svg';
 
   
 export const footerData = {

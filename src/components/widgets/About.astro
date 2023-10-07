@@ -1,7 +1,8 @@
 ---
 import { Icon } from 'astro-icon';
-import { Picture } from '@astrojs/image/components';
+import { Image } from 'astro:assets';
 import { getLangFromUrl, useTranslations } from '~/i18n/utils';
+import oli from '../../assets/images/oli.webp';
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
@@ -22,7 +23,7 @@ export interface Props {
   highlight?: string;
   content?: string;
   items?: Array<Item>;
-  portraitImage?: ImageMetadata;
+  portraitImage?: Image;
   isReversed?: boolean;
   isAfterContent?: boolean;
 }
@@ -101,13 +102,13 @@ const {
               {typeof portraitImage === 'string' ? (
                 <Fragment set:html={portraitImage} />
               ) : (
-                <Picture
+                <Image
                   class="mx-auto w-full rounded-3xl bg-gray-500 shadow-xl"
                   width={500}
                   height={500}
-                  widths={[400, 768]}
+                  src={oli}
+                  alt="Oli Dias"
                   sizes="(max-width: 768px) 100vw, 432px"
-                  aspectRatio="500:500"
                   {...portraitImage}
                 />
               )}
