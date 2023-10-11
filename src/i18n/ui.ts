@@ -107,7 +107,7 @@ export const ui = {
     'entry.item-usability.description': 'Wir legen besonderen Wert auf Usability. Durch responsive und bezaubernde Websites sprechen wir eine Vielzahl von Benutzer an.',
 
     'entry.item-quality.title': 'Qualität',
-    'entry.item-quality.description': 'Mit auserwählten Tools streben wir nach höchster Qualität.',
+    'entry.item-quality.description': 'Mit auserwählten Tools streben wir höchste Qualität an.',
 
 
     'use-cases.title': 'Anwendungsfälle',

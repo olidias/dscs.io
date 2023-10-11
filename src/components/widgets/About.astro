@@ -81,7 +81,7 @@ const {
                   <div class="ml-4">
                     {title2 && <h3 class="text-lg font-medium leading-6 dark:text-white">{title2}</h3>}
                     {description && <p class="mt-2 text-muted dark:text-slate-400" set:html={description} />}
-                    {false && // TODO: details &&
+                    { // TODO: details &&
                       <label for="readmore" >{t('shared.readmore')}</label>
                       <input type="checkbox" id="readmore" 
                       class="dark:text-slate-400 text-muted absolute w-full h-full cursor-pointer opacity-0

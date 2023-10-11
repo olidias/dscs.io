@@ -1,0 +1,129 @@
+import Hero from "~/components/widgets/Hero.astro";
+import Features from "~/components/widgets/Features.astro";
+import Features2 from "~/components/widgets/Features2.astro";
+import Steps from "~/components/widgets/Steps.astro";
+import Content from "~/components/widgets/Content.astro";
+import {
+backendToolsData,
+cmsToolsData,
+frontendToolsData
+} from "../data/data";
+import About from "./widgets/About.astro";
+import { t, lang } from "./MainComponent.astro";
+
+<Fragment>
+{/** Hero Widget ******************* */}<Hero>
+<Fragment slot="title">
+{t("hero.title")}
+</Fragment>
+
+<Fragment slot="subtitle">
+{t("hero.subtitle")}
+</Fragment>
+</Hero>
+
+<Features subtitle={t("entry.teaser")} items={[
+[
+{
+title: t("entry.item-fully-customized.title"),
+description: t("entry.item-fully-customized.description"),
+icon: "tabler:scissors",
+},
+{
+title: t("entry.item-customer-centricity.title"),
+description: t("entry.item-customer-centricity.description"),
+icon: "tabler:star",
+},
+],
+[
+{
+title: t("entry.item-usability.title"),
+description: t("entry.item-usability.description"),
+icon: "tabler:eye",
+},
+{
+title: t("entry.item-quality.title"),
+description: t("entry.item-quality.description"),
+icon: "tabler:diamond",
+},
+],
+]} />
+
+{/** Content Widget **************** */}
+
+<Content highlight={t("use-cases.title")} title={t("use-cases.subtitle")} items={[
+{
+title: t("use-cases.case1.title"),
+description: t("use-cases.case1.description"),
+details: "slkaj",
+},
+{
+title: t("use-cases.case2.title"),
+description: t("use-cases.case2.description"),
+},
+{
+title: t("use-cases.case3.title"),
+description: t("use-cases.case3.description"),
+},
+]}>
+<Fragment slot="content">
+<h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+</h3>
+</Fragment>
+</Content>
+
+{/** Steps Widget ****************** */}
+
+<Steps title={t("procedure.subtitle")} highlight={t("procedure.title")} items={[
+{
+title: `Step 1: ${t("procedure.step-1")}`,
+description: `${t("procedure.step-1.description")}`,
+icon: "ph:handshake-light",
+},
+{
+title: `Step 2: ${t("procedure.step-2")}`,
+description: `${t("procedure.step-2.description")}`,
+icon: "icon-park-outline:concept-sharing",
+},
+{
+title: `Step 3: ${t("procedure.step-3")}`,
+description: `${t("procedure.step-3.description")}`,
+icon: "wpf:recurring-appointment",
+},
+{
+title: `Step 4: ${t("procedure.step-4")}`,
+description: `${t("procedure.step-4.description")}`,
+icon: "tabler:check",
+},
+]} image={{
+src: import("~/assets/images/creativity.jpg"),
+alt: "Steps image",
+}} />
+
+{/** Features2 Widget ************** */}
+
+<Features2 title={t("tools.subtitle")} subtitle={t("tools.highlight")} highlight={t("tools.title")} items={[
+{
+title: t("tools.frontend"),
+description: t("tools.frontend.description"),
+icon: "noto:desktop-computer",
+techIcons: frontendToolsData.techIcons,
+},
+{
+title: t("tools.backend"),
+description: t("tools.backend.description"),
+icon: "mdi:server",
+techIcons: backendToolsData.techIcons,
+},
+{
+title: t("tools.cms"),
+description: t("tools.cms.description"),
+icon: "icon-park-outline:system",
+techIcons: cmsToolsData.techIcons,
+},
+]} />
+
+<About title={t('about.title')} highlight={t('about.highlight')} />
+
+<ContactForm client: visible href={`/${lang}/contact-complete`} lang={lang} />
+</Fragment>;
