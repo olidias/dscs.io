@@ -25,7 +25,7 @@ export const ui = {
     'hero.title': 'Dias Software Consulting Services',
     'hero.subtitle': 'Solid Software. Competent Consulting.',
 
-    'entry.teaser': 'Unleash the full potential of your software with our customer-centric consulting services and individualised software!',
+    'entry.teaser': 'Unleash the full potential of your business with our customer-centric consulting services and individualised software!',
 
     'entry.item-fully-customized.title': 'Fully Customized Solutions',
     'entry.item-fully-customized.description': 'Using the latest technologies and creative approaches, we come to the individualized application according to your imagination.',
@@ -85,6 +85,8 @@ export const ui = {
     'about.title': 'Who are we?',
     'about.subtitle': 'subtitle',
     'about.highlight': 'About us',
+    'about.content': 'With more than 8 years of experience in software development at a number of companies and industries I have been able to gather many valuable insights to the aspects of software engineering and project management.<br /> \
+    \ After getting my bachelor\'s degree at university OST in computer science in 2019 I started working at a software consulting company and since 2023, I offer software projects on a smaller scale as a side business.',
 
     'shared.readmore': 'Read more'
   },
@@ -95,7 +97,7 @@ export const ui = {
     'header.about': 'Über uns',
     'header.contact': 'Kontakt',
 
-    'entry.teaser': 'Entfessle das volle Potential Deiner Software mit unserer kundenorientierter Beratung und massgeschneiderter Software!',
+    'entry.teaser': 'Entfessle das volle Potential Deines Unternehmens mit unserer kundenorientierter Beratung und massgeschneiderter Software!',
 
     'entry.item-fully-customized.title': 'Komplett massgeschneiderte Lösungen',
     'entry.item-fully-customized.description': 'Durch modernste Technologien und kreativen Ansätzen kommen wir zur individualisierten Applikation gemäss Deiner Vorstellung. ',
@@ -156,6 +158,8 @@ export const ui = {
     'about.title': 'Wer sind wir?',
     'about.subtitle': 'subtitle',
     'about.highlight': 'Über uns',
+    'about.content': 'Mit über 8 Jahre Berufserfahrung im Bereich Software Entwicklung in verschiedenen Branchen und Firmen habe ich schon viele wertvolle Erkenntnisse im Bezug auf verschiedenste Aspekte des Software Engineerings und der Software Projektabwicklung gewonnen. <br />\
+  \ Seit meinem Bachelorabschluss in Informatik and der Fachhochschule OST im Jahr 2019 arbeite ich teilzeit bei einer Software Consulting Firma und biete als Nebenerwerb seit 2023 Software Projekte im kleineren Umfang an.',
 
     'shared.readmore': 'Mehr'
   },

@@ -17,7 +17,7 @@ import mssql from '../../public/techIcons/mssql.svg';
 import node from '../../public/techIcons/nodejs.svg';
 import wordpress from '../../public/techIcons/wordpress.svg';
 import dato from '../../public/techIcons/datocms.svg';
-
+import oli from '../../public/about/oli.webp';
   
 export const footerData = {
   links: [
@@ -182,4 +182,11 @@ export const cmsToolsData = {
       url: 'https://www.datocms.com/'
     }
   ]
+}
+
+export const aboutData = {
+  aboutImage: {
+    img: oli,
+    alt: "Oli Dias"
+  }
 }
