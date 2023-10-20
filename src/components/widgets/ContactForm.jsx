@@ -1,5 +1,4 @@
 import { FormEvent, useState } from 'react';
-import { SMTPClient } from 'emailjs';
 import * as React from 'react';
 export default function ContactForm({ lang }) {
 
