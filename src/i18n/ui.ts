@@ -22,7 +22,7 @@ export const ui = {
     'header.about': 'About',
     'header.contact': 'Contact Us',
 
-    'hero.title': 'Dias Software Consulting Services',
+    'hero.title': '',
     'hero.subtitle': 'Solid Software. Competent Consulting.',
 
     'entry.teaser': 'Unleash the full potential of your business with our customer-centric consulting services and individualised software!',
@@ -163,7 +163,7 @@ export const ui = {
     'about.subtitle': 'subtitle',
     'about.highlight': 'Über uns',
     'about.content': 'Mit über 8 Jahre Berufserfahrung im Bereich Software Entwicklung in verschiedenen Branchen und Firmen habe ich schon viele wertvolle Erkenntnisse im Bezug auf verschiedenste Aspekte des Software Engineerings und der Software Projektabwicklung gewonnen. <br />\
-  \ Seit meinem Bachelorabschluss in Informatik and der Fachhochschule OST im Jahr 2019 arbeite ich teilzeit bei einer Software Consulting Firma und biete als Nebenerwerb seit 2023 Software Projekte im kleineren Umfang an.',
+  \ Seit meinem Bachelorabschluss in Informatik and der Fachhochschule OST im Jahr 2019 arbeite ich teilzeit bei einem Software Consulting Unternehmen und biete als Nebenerwerb seit 2023 Software Projekte im kleineren Umfang an.',
 
     'contact.title': 'Wir freuen uns von Dir zu hören!',
     'contact.highlight': 'Kontakt',
