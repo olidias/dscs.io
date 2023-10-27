@@ -2,6 +2,7 @@
   "name": "dir",
   "description": "A template to make your website using Astro + Tailwind CSS.",
   "version": "0.9.8",
+  "type": "module",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
@@ -42,9 +43,13 @@
   },
   "dependencies": {
     "@astrojs/react": "^3.0.3",
+    "@astrojs/vercel": "^5.0.2",
+    "@vercel/node": "^3.0.7",
     "astro": "^3.3.2",
+    "emailjs": "^4.0.3",
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "text-encoding": "^0.7.0"
   }
 }

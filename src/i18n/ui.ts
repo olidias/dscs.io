@@ -88,6 +88,10 @@ export const ui = {
     'about.content': 'With more than 8 years of experience in software development at a number of companies and industries I have been able to gather many valuable insights to the aspects of software engineering and project management.<br /> \
     \ After getting my bachelor\'s degree at university OST in computer science in 2019 I started working at a software consulting company and since 2023, I offer software projects on a smaller scale as a side business.',
 
+    'contact.title': 'We are looking forward to hearing from you!',
+    'contact.highlight': 'Contact',
+
+
     'shared.readmore': 'Read more'
   },
   de: {
@@ -160,6 +164,10 @@ export const ui = {
     'about.highlight': 'Über uns',
     'about.content': 'Mit über 8 Jahre Berufserfahrung im Bereich Software Entwicklung in verschiedenen Branchen und Firmen habe ich schon viele wertvolle Erkenntnisse im Bezug auf verschiedenste Aspekte des Software Engineerings und der Software Projektabwicklung gewonnen. <br />\
   \ Seit meinem Bachelorabschluss in Informatik and der Fachhochschule OST im Jahr 2019 arbeite ich teilzeit bei einer Software Consulting Firma und biete als Nebenerwerb seit 2023 Software Projekte im kleineren Umfang an.',
+
+    'contact.title': 'Wir freuen uns von Dir zu hören!',
+    'contact.highlight': 'Kontakt',
+
 
     'shared.readmore': 'Mehr'
   },
