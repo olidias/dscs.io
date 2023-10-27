@@ -3,7 +3,8 @@
   "compilerOptions": {
     "strictNullChecks": true,
     "allowJs": true,
-    "moduleResolution": "NodeNext",
+    "module": "nodenext",
+    "moduleResolution": "nodenext",
     "baseUrl": ".",
     "paths": {
       "~/*": [

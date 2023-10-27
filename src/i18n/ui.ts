@@ -90,6 +90,8 @@ export const ui = {
 
     'contact.title': 'We are looking forward to hearing from you!',
     'contact.highlight': 'Contact',
+    'contact.requestconfirmation': 'Thank you for reaching out, ',
+    'contact.confirmationText': 'We will get hold of you as soon as possible.',
 
 
     'shared.readmore': 'Read more'
@@ -167,7 +169,8 @@ export const ui = {
 
     'contact.title': 'Wir freuen uns von Dir zu hören!',
     'contact.highlight': 'Kontakt',
-
+    'contact.requestconfirmation': 'Vielen Dank für Deine Kontaktanfrage, ',
+    'contact.confirmationText': 'Wir werden uns so schnell wie möglich bei Dir melden.',
 
     'shared.readmore': 'Mehr'
   },

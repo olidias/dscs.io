@@ -35,7 +35,7 @@ export default function ContactForm({ lang }) {
     }).then(response => {
       setDisableSend(false);
       if(response.ok){
-        location.href = `/`
+        location.href = `/${lang}/contact-complete?name=${firstName}`
       }
       else {
         console.error(`Request failed! ${response.statusText}`);
