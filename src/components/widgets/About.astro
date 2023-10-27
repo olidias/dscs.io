@@ -1,8 +1,7 @@
 ---
 import { Icon } from 'astro-icon';
-import { Image } from 'astro:assets';
 import { getLangFromUrl, useTranslations } from '~/i18n/utils';
-import oli from '../../assets/images/oli.webp';
+import { aboutData } from '../../data/data';
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
@@ -23,7 +22,6 @@ export interface Props {
   highlight?: string;
   content?: string;
   items?: Array<Item>;
-  portraitImage?: Image;
   isReversed?: boolean;
   isAfterContent?: boolean;
 }
@@ -34,10 +32,10 @@ const {
   highlight,
   content = await Astro.slots.render('content'),
   items = [],
-  portraitImage = await Astro.slots.render('image'),
   isReversed = false,
   isAfterContent = false,
 } = Astro.props;
+
 ---
 
 <section class:list={[{ 'pt-0 md:pt-0': isAfterContent }, 'bg-blue-50 dark:bg-slate-800 py-14 md:py-16 scroll-mt-12']} id="about">
@@ -67,7 +65,7 @@ const {
   <div class="mx-auto max-w-7xl p-2 md:px-8">
     <div class={`md:flex ${isReversed ? 'md:flex-row-reverse' : ''} md:gap-16`}>
       <div class="md:basis-1/2 self-center">
-        {content && <div class="mb-12 text-lg dark:text-slate-400" set:html={content} />}
+        {content && <div class="mb-12 text-lg dark:text-slate-400 " set:html={content} />}
         {
           items && (
             <div class="space-y-8">
@@ -96,25 +94,17 @@ const {
         }
       </div>
       <div aria-hidden="true" class="mt-10 md:mt-0 md:basis-1/2">
-        {
-          portraitImage && (
-            <div class="relative m-auto max-w-4xl">
-              {typeof portraitImage === 'string' ? (
-                <Fragment set:html={portraitImage} />
-              ) : (
-                <Image
-                  class="mx-auto w-full rounded-3xl bg-gray-500 shadow-xl"
-                  width={500}
-                  height={500}
-                  src={oli}
+            <div class="relative ">
+                <img 
+                  src={aboutData.aboutImage.img?.src}
+                  alt={aboutData.aboutImage.alt}
+                  class="mx-auto rounded-full bg-gray-500 shadow-xl bg-cover"
+                  width={250}
+                  height={250}
                   alt="Oli Dias"
                   sizes="(max-width: 768px) 100vw, 432px"
-                  {...portraitImage}
                 />
-              )}
             </div>
-          )
-        }
       </div>
     </div>
   </div>

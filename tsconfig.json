@@ -3,6 +3,7 @@
   "compilerOptions": {
     "strictNullChecks": true,
     "allowJs": true,
+    "moduleResolution": "NodeNext",
     "baseUrl": ".",
     "paths": {
       "~/*": [
