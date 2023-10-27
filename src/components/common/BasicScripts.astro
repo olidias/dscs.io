@@ -36,9 +36,13 @@ import { SITE } from '~/config.mjs';
     let ticking = true;
 
     attachEvent('[data-aw-toggle-menu]', 'click', function (_, elem) {
-      elem.classList.toggle('expanded');
-      document.body.classList.toggle('overflow-hidden');
-      document.getElementById('header')?.classList.toggle('h-screen');
+      if(elem.getElementById?.id !== 'toggleMenu'){
+        document.getElementById('toggleMenu')?.classList.toggle('expanded');
+      } else{
+        elem.classList.toggle('expanded');
+        document.getElementById('header')?.classList.toggle('h-screen');
+        document.body.classList.toggle('overflow-hidden');
+      }
       document.querySelector('#header nav')?.classList.toggle('hidden');
     });
 

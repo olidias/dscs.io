@@ -53,7 +53,7 @@ const links = [
     },
     {
       textKey: 'header.contact',
-      href: '#'
+      href: '#contact'
     },
   ];
 ;
@@ -86,8 +86,8 @@ const t = useTranslations(lang);
       <ul class="flex flex-col pt-8 md:pt-0 md:flex-row md:self-center w-full md:w-auto text-xl md:text-base">
         {
           links.map(({ textKey, href }) => (
-            <li >
-                <a
+            <li>
+                <a data-aw-toggle-menu
                   class="font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out"
                   href={href}
                 >
@@ -107,30 +107,3 @@ const t = useTranslations(lang);
     </div>
   </div>
 </header>
-<!-- 
-<script>
-  const dropdowns = document.querySelectorAll("#languageDropdown");
-  const buttons = document.querySelectorAll('#languageDropdownButton');
-  buttons.forEach(b => b.addEventListener('click', () => {
-    dropdowns.forEach(dd => dd?.classList.contains('hidden') ? dd?.classList.remove('hidden') : dd?.classList.add('hidden'));
-    hideOnClickOutside(dropdowns, buttons);
-  }));
-  
-  function hideOnClickOutside(dropdownElement, buttonElement) {
-      const outsideClickListener = event => {
-          if (!dropdownElement.contains(event.target) && isVisible(dropdownElement) && !buttonElement.contains(event.target) && isVisible(buttonElement)) { // or use: event.target.closest(selector) === null
-            dropdowns.forEach(dd => dd?.classList.contains('hidden') ? dd?.classList.remove('hidden') : dd?.classList.add('hidden'));
-            removeClickListener();
-          }
-      }
-  
-      const removeClickListener = () => {
-          document.removeEventListener('click', outsideClickListener);
-      }
-  
-      document.addEventListener('click', outsideClickListener);
-  }
-  
-  const isVisible = elem => !!elem && !!( elem.offsetWidth || elem.offsetHeight || elem.getClientRects().length ); // source (2018-03-11): https://github.com/jquery/jquery/blob/master/src/css/hiddenVisibleSelectors.js 
-  
-  </script> -->

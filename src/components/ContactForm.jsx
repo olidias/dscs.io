@@ -1,5 +1,9 @@
-import { FormEvent, useState } from 'react';
+import { useState } from 'react';
 import * as React from 'react';
+
+export const prerender = false;
+
+
 export default function ContactForm({ lang }) {
 
   const [firstName, setFirstName] = useState('');
@@ -21,12 +25,21 @@ export default function ContactForm({ lang }) {
       "message": message,
     };
     setDisableSend(true);
-    fetch("/api/sendMessage", {
+
+    console.log('sending mail');
+    
+    
+    fetch("/api/sendMail", {
       method: "POST",
       body: JSON.stringify(body)
     }).then(response => {
       setDisableSend(false);
-      location.href = `/`
+      if(response.ok){
+        location.href = `/`
+      }
+      else {
+        console.error(`Request failed! ${response.statusText}`);
+      }
     });
   }
 
@@ -71,7 +84,15 @@ export default function ContactForm({ lang }) {
             onChange={e => setMobile(e.target.value)}
             placeholder="Mobile*"
           />
-          
+          <div className="sm:col-span-2">
+            <input  className="w-full bg-gray-100 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
+            type="text"
+            id="subject"
+            value={subject}
+            onChange={e => setSubject(e.target.value)}
+            placeholder={lang === 'en' ? 'Subject*' : 'Betreff*'}
+            />
+          </div>
           <div className="sm:col-span-2">
             <textarea
               placeholder={lang === 'en' ? 'Message*' : 'Nachricht*'}
@@ -81,8 +102,7 @@ export default function ContactForm({ lang }) {
               value={message}
             ></textarea>
             <button type="submit" value={lang === 'en' ? 'Send Message' : 'Nachricht senden'}
-              disabled={disableSend}
-              className={`uppercase justify-center font-medium rounded-xl mb-9 mt-5 focus-visible:outline-mainGreen focus:outline-none inline-flex bg-mainGreen border-2 border-accentBeigeSub duration-200 focus-visible:ring-mainGreen hover:bg-transparent
+              className={`uppercase mx-auto w-full justify-center font-medium rounded-xl mb-9 mt-5 inline-flex border-2 border-accentBeigeSub duration-200 focus-visible:ring-mainGreen hover:bg-slate-200 dark:hover:bg-slate-200 dark:hover:text-slate-800
            hover:border-mainGreen hover:text-mainGreen px-5 py-3 text-center min-w-[159px] text-accentBeige hover:cursor-pointer ${disableSend ? 'disabled animate-pulse hover:cursor-default cursor-default' : ''}`}
             >
               {disableSend ? (lang === 'en' ? 'Sending message' : 'Nachricht wird gesendet') : (lang === 'en' ? 'Send Message' : 'Nachricht senden')}

@@ -1,5 +1,5 @@
 const CONFIG = {
-  name: 'DSCS',
+  name: 'DSCS.io',
 
   origin: 'https://dscs.io',
   basePathname: '/',
