@@ -1,0 +1,20 @@
+---
+import ContactCompleteComponent from "../../components/widgets/ContactCompleteComponent.astro";
+import { SITE } from "~/config.mjs";
+import { getLangFromUrl, useTranslations } from "~/i18n/utils.ts";
+import Layout from '~/layouts/PageLayout.astro';
+
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+const meta = {
+  title: SITE.title,
+  description: SITE.description,
+  dontUseTitleTemplate: true,
+  language: lang,
+};
+---
+<Layout {meta} showNavigation={false}>
+    <ContactCompleteComponent titleMessage={t('contact.requestconfirmation')} confirmationText={t('contact.confirmationText')} />
+</Layout>
+  

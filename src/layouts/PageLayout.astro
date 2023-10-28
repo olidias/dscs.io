@@ -8,14 +8,15 @@ import type { MetaSEO } from '~/types';
 
 export interface Props {
   meta?: MetaSEO;
+  showNavigation?: boolean;
 }
 
-const { meta } = Astro.props;
+const { meta, showNavigation } = Astro.props;
 ---
 
 <Layout {meta}>
   <slot name="header">
-    <Header isSticky showToggleTheme />
+    <Header isSticky showToggleTheme showNavigation={showNavigation ?? true} />
   </slot>
   <main>
     <slot />

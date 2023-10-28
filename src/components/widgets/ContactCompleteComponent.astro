@@ -1,0 +1,20 @@
+---
+const name = Astro.url.searchParams.get("name")! || "";
+
+
+const {
+    titleMessage,
+    confirmationText
+} = Astro.props;
+---
+
+
+<section class="flex flex-col my-10 mx-5" id="features">
+    <div class="mx-auto text-3xl">
+        <h1>{titleMessage} {name}!</h1>
+    </div>
+    <div class="mx-auto mt-5">
+        <span>{confirmationText}</span>
+    </div>
+</section>
+  
