@@ -1,6 +1,9 @@
 ---
+import { Image } from 'astro:assets';
+import logo from '../../public/dscs.svg';
+console.log(logo);
 ---
 
-<span class="self-center ml-2 text-2xl md:text-xl font-bold text-gray-900 whitespace-nowrap dark:text-white">
-  🚀 DSCS</span
+<span class="self-center sm:ml-10">
+  <img src={logo.src} alt="DSCS.io Logo" height=50 width=100/></span
 >
