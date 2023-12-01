@@ -1,0 +1,85 @@
+---
+
+export interface Props {
+    title?: string;
+    subtitle?: string;
+    testimonials: Array<Testimonial>;
+}
+export interface Testimonial {
+    title?: string;
+    subtitle?: string;
+    description: string;
+    url?: string;
+    coverImage: ImageMetadata;
+}
+
+const {
+  title = await Astro.slots.render('title'),
+  subtitle = await Astro.slots.render('subtitle'),
+  testimonials = [],
+} = Astro.props;
+---
+<section id="references" class="-mt-10">
+    <div class="bg-blue-50 dark:bg-slate-800 pointer-events-none mb-32" aria-hidden="true"></div>
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 ">
+      <div class="py-4 pt-8 sm:py-6 lg:py-8 lg:pt-12">
+        {
+          (title || subtitle) && (
+            <div class="mb-8 md:mx-auto text-center max-w-3xl">
+              {title && (
+                <h2
+                  class="text-4xl md:text-5xl font-bold leading-tighter tracking-tighter mb-4 font-heading"
+                  set:html={title}
+                />
+              )}
+              {subtitle && (
+                <p
+                  class="max-w-3xl mx-auto sm:text-center text-xl text-muted dark:text-slate-400"
+                  set:html={subtitle}
+                />
+              )}
+            </div>
+          )
+        }
+        <div class={`dark:text-white items-stretch mx-auto`}>
+            <div id="animation-carousel" class="relative w-full" data-carousel="static">
+                <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
+                  {testimonials.map(({ title, subtitle, description, url, coverImage }) => (
+                    <div class="hidden duration-200 ease-linear" data-carousel-item>
+                      <div class="mx-auto shadow-md flex w-1/2 flex-col bg-white">
+                        <div class="flex">
+                          <div class="absolute">
+                            <img src={coverImage.src} alt={coverImage.alt} height={200} width={150} />
+                          </div>
+                          <div class="mt-4 ml-5 dark:bg-slate-700">
+                            <h1 class="text-xl">{title}</h1>
+                            <p class="font-light">{subtitle}</p>
+                          </div>
+                      </div>
+                      <p>{description}</p>
+                      </div>
+                    </div>
+                    <div class="hidden duration-200 ease-linear" data-carousel-item>
+                        <img src="/docs/images/carousel/carousel-2.svg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+                    </div>
+                  </div>))}
+             <button type="button" class="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
+                <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                    <svg class="w-4 h-4 text-white dark:text-gray-800" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"/>
+                    </svg>
+                    <span class="sr-only">Previous</span>
+                </span>
+            </button>
+            <button type="button" class="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
+                <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                    <svg class="w-4 h-4 text-white dark:text-gray-800" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
+                    </svg>
+                    <span class="sr-only">Next</span>
+                </span>
+            </button>
+        </div>
+      </div>
+    </div>
+</section>

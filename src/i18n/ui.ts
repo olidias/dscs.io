@@ -81,6 +81,13 @@ export const ui = {
 
     'tools.cms': 'CMS',
     'tools.cms.description': 'There are a number of ways to integrate various CMS with our solutions.',
+    
+    'reference.title': 'References',
+    'reference.description': 'Check out previous projects.',
+
+    'reference.testimonial.fsma.title': 'Andri Koeferli',
+    'reference.testimonial.fsma.subtitle': 'Fitter. Stronger. More Athletic.',
+    'reference.testimonial.fmsa.description': 'I was very happy with the service that Oli has provided.',
 
     'about.title': 'Who are we?',
     'about.subtitle': 'subtitle',
@@ -160,6 +167,13 @@ export const ui = {
 
     'tools.cms': 'CMS',
     'tools.cms.description': 'Verschiedenste Möglichkeiten zur Integration von allerlei Content Management Systemen sind vorhanden.',
+
+    'reference.title': 'Referenzen',
+    'reference.description': 'Schau dir die bisherigen Projekte an',
+
+    'reference.testimonial.fsma.title': 'Andri Koeferli',
+    'reference.testimonial.fsma.subtitle': 'Fitter. Stronger. More Athletic.',
+    'reference.testimonial.fmsa.description': 'Ich bin sehr glücklich mit dem Service, den mir Oli geboten hat.',
 
     'about.title': 'Wer sind wir?',
     'about.subtitle': 'subtitle',

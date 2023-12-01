@@ -17,6 +17,7 @@ import node from '../../public/techIcons/nodejs.svg';
 import wordpress from '../../public/techIcons/wordpress.svg';
 import dato from '../../public/techIcons/datocms.svg';
 import oli from '../../public/about/oli.webp';
+import fsma from '../../public/testimonials/fsma.webp';
 
 export const frontendToolsData = {
   techIcons: [
@@ -122,6 +123,14 @@ export const cmsToolsData = {
     }
   ]
 }
+
+export const testimonialsData = [
+  {
+    img: fsma,
+    alt: 'Fitter. Stronger. More Athletic.',
+    url: 'https://fitterstrongermoreathletic.com'
+  }
+]
 
 export const aboutData = {
   aboutImage: {
