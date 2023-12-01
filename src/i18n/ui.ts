@@ -110,7 +110,7 @@ export const ui = {
     'header.about': 'Über uns',
     'header.contact': 'Kontakt',
 
-    'entry.teaser': 'Entfessle das volle Potential Deines Unternehmens mit unserer kundenorientierter Beratung und massgeschneiderter Software!',
+    'entry.teaser': 'Entfessle das volle Potential Deines Unternehmens mit unserer kundenorientierten Beratung und massgeschneiderter Software!',
 
     'entry.item-fully-customized.title': 'Komplett massgeschneiderte Lösungen',
     'entry.item-fully-customized.description': 'Durch modernste Technologien und kreativen Ansätzen kommen wir zur individualisierten Applikation gemäss Deiner Vorstellung. ',
