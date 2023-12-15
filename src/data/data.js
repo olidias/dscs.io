@@ -128,7 +128,11 @@ export const testimonialsData = [
   {
     img: fsma,
     alt: 'Fitter. Stronger. More Athletic.',
-    url: 'https://fitterstrongermoreathletic.com'
+    author: 'Andri Koeferli',
+    url: 'https://fitterstrongermoreathletic.com',
+    title: '',
+    subtitle: '',
+    description: 'Here is the description'
   }
 ]
 

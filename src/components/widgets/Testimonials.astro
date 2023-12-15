@@ -3,19 +3,21 @@
 export interface Props {
     title?: string;
     subtitle?: string;
+    description?: string;
     testimonials: Array<Testimonial>;
 }
 export interface Testimonial {
     title?: string;
     subtitle?: string;
+    author: string;
     description: string;
     url?: string;
     coverImage: ImageMetadata;
 }
 
 const {
-  title = await Astro.slots.render('title'),
-  subtitle = await Astro.slots.render('subtitle'),
+  title,
+  subtitle,
   testimonials = [],
 } = Astro.props;
 ---
@@ -34,35 +36,24 @@ const {
               )}
               {subtitle && (
                 <p
-                  class="max-w-3xl mx-auto sm:text-center text-xl text-muted dark:text-slate-400"
-                  set:html={subtitle}
-                />
+                  class="max-w-3xl mx-auto sm:text-center text-xl text-muted dark:text-slate-400">{subtitle}</p>
               )}
             </div>
           )
         }
         <div class={`dark:text-white items-stretch mx-auto`}>
             <div id="animation-carousel" class="relative w-full" data-carousel="static">
-                <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
-                  {testimonials.map(({ title, subtitle, description, url, coverImage }) => (
-                    <div class="hidden duration-200 ease-linear" data-carousel-item>
-                      <div class="mx-auto shadow-md flex w-1/2 flex-col bg-white">
-                        <div class="flex">
-                          <div class="absolute">
-                            <img src={coverImage.src} alt={coverImage.alt} height={200} width={150} />
-                          </div>
-                          <div class="mt-4 ml-5 dark:bg-slate-700">
-                            <h1 class="text-xl">{title}</h1>
-                            <p class="font-light">{subtitle}</p>
-                          </div>
+                <div class="relative h-56 overflow-hidden rounded-lg md:h-96 flex-row justify-center flex">
+                  {testimonials.map(({ title, author, description, url, coverImage },i) => (
+                      <div class={`flex flex-col justify-center md:w-1/2 mx-auto  duration-500 ease-linear ${i>0 ? 'hidden': ''}`}  data-carousel-item>
+                        <div class='min-w-[300px] flex flex-col items-center bg-blue-50 dark:bg-slate-800 rounded p-10 mx-auto shadow-lg hover:shadow-md'>
+                            <img src={coverImage.src} alt={coverImage.alt} class='w-[150px] h-[150px] rounded-full mt-[-75px]'/>
+                            <p class="text-2xl italic font-serif"><span class="text-5xl">"</span>{description}<span class="text-5xl">"</span></p>
+                            <small id='author'>{author}</small>
+                            <a id='url' href={url}><small class="italic underline">{url}</small></a>
+                        </div>
                       </div>
-                      <p>{description}</p>
-                      </div>
-                    </div>
-                    <div class="hidden duration-200 ease-linear" data-carousel-item>
-                        <img src="/docs/images/carousel/carousel-2.svg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
-                    </div>
-                  </div>))}
+                    ))}
              <button type="button" class="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
                 <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
                     <svg class="w-4 h-4 text-white dark:text-gray-800" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
