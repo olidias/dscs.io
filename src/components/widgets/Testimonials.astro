@@ -1,76 +1,135 @@
 ---
-
 export interface Props {
-    title?: string;
-    subtitle?: string;
-    description?: string;
-    testimonials: Array<Testimonial>;
+  title?: string;
+  highlight?: string;
+  description?: string;
+  testimonials: Array<Testimonial>;
 }
 export interface Testimonial {
-    title?: string;
-    subtitle?: string;
-    author: string;
-    description: string;
-    url?: string;
-    coverImage: ImageMetadata;
+  title?: string;
+  author: string;
+  description: string;
+  url?: string;
+  coverImage: ImageMetadata;
 }
 
-const {
-  title,
-  subtitle,
-  testimonials = [],
-} = Astro.props;
+const { title, highlight, testimonials = [] } = Astro.props;
 ---
-<section id="references" class="-mt-10">
-    <div class="bg-blue-50 dark:bg-slate-800 pointer-events-none mb-32" aria-hidden="true"></div>
-    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 ">
-      <div class="py-4 pt-8 sm:py-6 lg:py-8 lg:pt-12">
-        {
-          (title || subtitle) && (
-            <div class="mb-8 md:mx-auto text-center max-w-3xl">
-              {title && (
-                <h2
-                  class="text-4xl md:text-5xl font-bold leading-tighter tracking-tighter mb-4 font-heading"
-                  set:html={title}
-                />
-              )}
-              {subtitle && (
-                <p
-                  class="max-w-3xl mx-auto sm:text-center text-xl text-muted dark:text-slate-400">{subtitle}</p>
-              )}
-            </div>
-          )
-        }
-        <div class={`dark:text-white items-stretch mx-auto`}>
-            <div id="animation-carousel" class="relative w-full" data-carousel="static">
-                <div class="relative h-56 overflow-hidden rounded-lg md:h-96 flex-row justify-center flex">
-                  {testimonials.map(({ title, author, description, url, coverImage },i) => (
-                      <div class={`flex flex-col justify-center md:w-1/2 mx-auto  duration-500 ease-linear ${i>0 ? 'hidden': ''}`}  data-carousel-item>
-                        <div class='min-w-[300px] flex flex-col items-center bg-blue-50 dark:bg-slate-800 rounded p-10 mx-auto shadow-lg hover:shadow-md'>
-                            <img src={coverImage.src} alt={coverImage.alt} class='w-[150px] h-[150px] rounded-full mt-[-75px]'/>
-                            <p class="text-2xl italic font-serif"><span class="text-5xl">"</span>{description}<span class="text-5xl">"</span></p>
-                            <small id='author'>{author}</small>
-                            <a id='url' href={url}><small class="italic underline">{url}</small></a>
-                        </div>
-                      </div>
-                    ))}
-             <button type="button" class="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
-                <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-                    <svg class="w-4 h-4 text-white dark:text-gray-800" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"/>
-                    </svg>
-                    <span class="sr-only">Previous</span>
-                </span>
+
+<section id="references" class="-mt-40 mb-16">
+  <div
+    class="bg-blue-50 dark:bg-slate-800 pointer-events-none mb-32"
+    aria-hidden="true"
+  >
+  </div>
+  <div class="relative max-w-7xl mx-auto px-4 sm:px-6">
+    <div class="py-4 pt-8 sm:py-6 lg:py-8 lg:pt-12 ">
+      {
+        (title || highlight) && (
+          <div class="mb-8 md:mx-auto text-center max-w-3xl">
+            {highlight && (
+              <p
+                class="text-base text-primary dark:text-blue-200 font-semibold tracking-wide uppercase mb-2"
+                set:html={highlight}
+              />
+            )}
+            {title && (
+              <h2
+                class="text-4xl md:text-5xl font-bold leading-tighter tracking-tighter mb-4 font-heading"
+                set:html={title}
+              />
+            )}
+          </div>
+        )
+      }
+      <div class={`dark:text-white items-stretch mx-auto `}>
+        <div
+          class="relative w-full "
+        >
+          <div
+            class="overflow-hidden flex-row justify-center flex pt-[4rem] sm:pt-[6rem]"
+          >
+            {
+              testimonials.map(
+                ({ author, description, url, coverImage }, i) => (
+                  <div
+                    class={`flex flex-col justify-center pb-5 mx-auto duration-500 ease-linear ${i > 0 ? "md:w-1/2" : ""}`}
+                  >
+                    <div class="min-w-[300px] flex flex-col p-10 items-center bg-blue-50 dark:bg-slate-800 rounded mx-auto shadow-lg hover:shadow-md">
+                      <img
+                        src={coverImage.src}
+                        alt={coverImage.alt}
+                        class="sm:w-[150px] sm:h-[150px] rounded-full sm:mt-[-125px] w-[100px] h-[100px] mt-[-90px] dark:border-slate-600 border-slate-300 border-2"
+                      />
+                      <p class="text-2xl italic font-serif my-5 text-center dark:text-slate-200 ">
+                        <span class="text-2xl ">"</span>
+                        {description}
+                        <span class="text-2xl">"</span>
+                      </p>
+                        <span class="mr-2 opacity-75">-</span>
+                        {author}
+                      <a id="url" href={url} class="italic opacity-50">
+                        {url}
+                      </a>
+                    </div>
+                  </div>
+                )
+              )
+            }
+            {
+            testimonials.length > 1 ? (
+            <button
+              type="button"
+              class="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+            >
+              <span
+                class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none"
+              >
+                <svg
+                  class="w-4 h-4 text-white dark:text-gray-800"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 6 10"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M5 1 1 5l4 4"></path>
+                </svg>
+                <span class="sr-only">Previous</span>
+              </span>
             </button>
-            <button type="button" class="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
-                <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-                    <svg class="w-4 h-4 text-white dark:text-gray-800" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
-                    </svg>
-                    <span class="sr-only">Next</span>
-                </span>
+            <button
+              type="button"
+              class="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+            >
+              <span
+                class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none"
+              >
+                <svg
+                  class="w-4 h-4 text-white dark:text-gray-800"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 6 10"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="m1 9 4-4-4-4"></path>
+                </svg>
+                <span class="sr-only">Next</span>
+              </span>
             </button>
+            ) : ''}
+          </div>
         </div>
       </div>
     </div>
+  </div>
 </section>
